@@ -1,9 +1,6 @@
 import torch.hub
-from dotenv import load_dotenv
-import os
+from settings import TORCH_CACHE_DIR
 
-load_dotenv()  # Loads variables from .env
-TORCH_CACHE_DIR = os.getenv("TORCH_CACHE_DIR")
 torch.hub.set_dir(TORCH_CACHE_DIR)
 
 from torchvision import models
